@@ -81,7 +81,9 @@ for file_name in file_names:
 
     # Reformat the date taken to "YYYYMMDD-HHmmss"
     # NOTE: Change this line to change the date/time format of the output filename
-    date_time = date_taken.strftime("%Y%m%d-%H%M%S")
+    # date_time = date_taken.strftime("%Y-%m-%d-%H%M%S")
+    # %H%M%S is required, ensure unique
+    date_time = date_taken.strftime("%d %b %Y - %H%M%S")
     
     # Combine the new file name and file extension
     new_file_name = date_time + file_ext
